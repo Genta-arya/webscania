@@ -3,6 +3,7 @@ import { FaChevronLeft } from "react-icons/fa6";
 import { useLocation, useNavigate } from "react-router-dom";
 import { path } from "../utils/utils";
 import useSearch from "../libs/Zustand/useSearch";
+import { toast, Toaster } from "sonner";
 
 const Navbar = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -26,8 +27,10 @@ const Navbar = () => {
 
     if (newMode) {
       document.body.classList.add("dark");
+      toast.info("Dark mode on");
     } else {
       document.body.classList.remove("dark");
+      toast.info("Light mode on", {});
     }
 
     localStorage.setItem("darkMode", newMode);
@@ -44,7 +47,7 @@ const Navbar = () => {
 
   return (
     <nav className="flex justify-between items-center p-4 shadow-md dark:border-gray-400 dark:border-b">
-      <div className="text-xl font-bold text-black dark:text-white ">
+      <div className=" font-bold text-black dark:text-white ">
         <div
           className="flex items-center gap-4 cursor-pointer"
           onClick={handleBack}
@@ -71,6 +74,7 @@ const Navbar = () => {
           </div>
         </label>
       )}
+     
     </nav>
   );
 };

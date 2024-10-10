@@ -17,7 +17,7 @@ const Search = () => {
     };
 
     return (
-        <div className="flex items-center border border-gray-300 rounded-lg p-2 dark:text-white dark:bg-gray-800">
+        <div className="flex items-center border border-gray-300 rounded-lg p-2 dark:text-white  dark:bg-gray-800">
             <img src={icon.search} alt="Search Icon" className="mr-2 w-8" />
             <input
                 type="text"
