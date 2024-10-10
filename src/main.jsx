@@ -1,14 +1,36 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import App from "./App.jsx";
+
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { path } from "./utils/utils.js";
+import Home from "./view/home/Home.jsx";
+import MainType from "./view/type/MainType.jsx";
+import MainWiring from "./view/wiring/MainWiring.jsx";
+import MainWorkshop from "./view/workshop/MainWorkshop.jsx";
+import Webview from "./components/Webview.jsx";
 
 const router = createBrowserRouter([
   {
     path: path.home,
-    element: <App />,
+    element: <Home />,
+  },
+  {
+    path: path.type,
+    element: <MainType />,
+  },
+  {
+    path: path.wiring,
+    element: <MainWiring />,
+  },
+
+  {
+    path: path.workshop,
+    element: <MainWorkshop />,
+  },
+  {
+    path: path.company,
+    element: <Webview />,
   },
 ]);
 

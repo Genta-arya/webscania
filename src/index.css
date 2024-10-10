@@ -1,3 +1,28 @@
+/* styles.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Kelas kustom untuk tema */
+body {
+  @apply bg-white; /* Tema terang default */
+}
+
+body.dark {
+  @apply bg-gray-900; /* Tema gelap */
+}
+/* Menghilangkan scrollbar untuk semua elemen */
+::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Untuk Mozilla Firefox */
+  html {
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  /* Untuk Internet Explorer dan Edge */
+  body {
+    -ms-overflow-style: none; /* Internet Explorer and Edge */
+  }
+  
