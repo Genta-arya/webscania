@@ -18,7 +18,9 @@ const MainMenu = () => {
         className="absolute inset-0"
         style={{
           backgroundImage: `url(${bg})`,
-          backgroundSize: "cover",
+          backgroundSize: "cover", 
+         
+          backgroundPosition: "center",
           filter: "brightness(0.5)",
         }}
       />
