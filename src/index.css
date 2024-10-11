@@ -2,15 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Kelas kustom untuk tema */
+
 body {
-  @apply bg-white text-black; /* Tema terang default */
+  @apply bg-white text-black; 
   transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
 }
 
-/* Tema gelap */
+
 body.dark {
-  @apply bg-gray-900 text-white; /* Tema gelap */
+  @apply bg-gray-900 text-white; 
 }
 
 
