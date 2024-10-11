@@ -37,9 +37,8 @@ const Navbar = () => {
   };
 
   const handleBack = () => {
-    setSearchQuery("");
-    if (window.history.length > 1) {
-      navigate(-1);
+    if (location.pathname.startsWith("/workshop/")) {
+      navigate("/workshop");
     } else {
       navigate("/");
     }
@@ -65,16 +64,15 @@ const Navbar = () => {
               checked={darkMode}
               onChange={toggleDarkMode}
             />
-            <div className="block bg-gray-400 w-14 h-8 rounded-full"></div>
+            <div className="block bg-gray-400 w-14 h-5 rounded-full"></div>
             <div
-              className={`dot absolute left-1 top-1 bg-white w-6 h-6 rounded-full transition ${
+              className={`dot absolute left-1 top-1 bg-white w-6 h-3 rounded-md transition ${
                 darkMode ? "translate-x-full bg-yellow-400" : "translate-x-0"
               }`}
             ></div>
           </div>
         </label>
       )}
-     
     </nav>
   );
 };

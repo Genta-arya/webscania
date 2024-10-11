@@ -1,6 +1,7 @@
 import React from "react";
 import MainContainer from "../../components/MainContainer";
 import Search from "../../components/Search.JSX";
+import RenderWorkshop from "./components/RenderWorkshop";
 
 const MainWorkshop = () => {
   return (
@@ -9,6 +10,7 @@ const MainWorkshop = () => {
       <div>
         <Search />
       </div>
+      <RenderWorkshop />
     </MainContainer>
   );
 };

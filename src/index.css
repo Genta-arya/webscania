@@ -1,34 +1,33 @@
-/* styles.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 /* Kelas kustom untuk tema */
 body {
-  @apply bg-white; /* Tema terang default */
-  transition: background-color 0.5s ease-in-out; /* Transisi untuk body */
+  @apply bg-white text-black; /* Tema terang default */
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
 }
 
+/* Tema gelap */
 body.dark {
-  @apply bg-gray-900; /* Tema gelap */
+  @apply bg-gray-900 text-white; /* Tema gelap */
 }
 
-/* Transisi untuk elemen dengan background berbeda pada tema */
+
 .transition-element {
-  transition: background-color 0.5s ease-in-out; /* Transisi background */
+  transition: background-color 0.8s ease-in-out, color 0.8s ease-in-out, transform 0.8s ease;
 }
 
-/* Menghilangkan scrollbar untuk semua elemen */
+
 ::-webkit-scrollbar {
   display: none;
 }
-  
-/* Untuk Mozilla Firefox */
+
 html {
-  scrollbar-width: none; /* Firefox */
+  scrollbar-width: none; 
 }
-  
-/* Untuk Internet Explorer dan Edge */
+
+
 body {
-  -ms-overflow-style: none; /* Internet Explorer and Edge */
+  -ms-overflow-style: none; 
 }
