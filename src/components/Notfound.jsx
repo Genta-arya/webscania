@@ -2,9 +2,9 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const Notfound = () => {
-  const navigate = useNavigate(); // Mendapatkan objek navigate untuk navigasi
+  const navigate = useNavigate(); 
   const handleGoHome = () => {
-    navigate("/"); // Arahkan ke halaman utama
+    navigate("/"); 
   };
 
   return (
