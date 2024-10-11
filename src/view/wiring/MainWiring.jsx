@@ -1,6 +1,6 @@
 import React from "react";
 import MainContainer from "../../components/MainContainer";
-import Search from "../../components/Search.JSX";
+import Search from "../../components/Search";
 import ListWiring from "./components/ListWiring";
 
 const MainWiring = () => {
