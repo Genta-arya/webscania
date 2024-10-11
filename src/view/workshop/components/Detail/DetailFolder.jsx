@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import MainContainer from "../../../../components/MainContainer";
-import Search from "../../../../components/Search.JSX";
+import Search from "../../../../components/Search";
 import { getDetailWorkshop } from "../../../../Service/workshop/service_workshop";
 import useSearch from "../../../../libs/Zustand/useSearch"; // Import useSearch
 import ListItemContainer from "../../../../components/ListItemContainer";
