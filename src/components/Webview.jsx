@@ -2,9 +2,10 @@ import React, { useEffect, useState } from "react";
 import MainContainer from "./MainContainer";
 import Loading from "./Loading";
 
-const Webview = () => {
-  const link = "https://www.kppmining.com/profile";
+const Webview = ({ link }) => {
+  const links = "https://www.kppmining.com/profile";
   const [loading, setLoading] = useState(true);
+  console.log(link);
 
   useEffect(() => {
     document.body.classList.remove("dark");
@@ -17,8 +18,9 @@ const Webview = () => {
   return (
     <MainContainer>
       {loading && <Loading />}
+
       <iframe
-        src={link}
+        src={links}
         title="Webview"
         className={`w-full h-screen border-none overflow-hidden ${
           loading ? "hidden" : "block"

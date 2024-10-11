@@ -18,7 +18,7 @@ const MainMenu = () => {
       <div className="bg-grays bg-opacity-80 rounded-lg shadow-lg p-6 z-10 lg:w-[50%] md:w-[80%] w-full text-sm md:text-base font-bold">
         <div className="flex items-center mb-4">
           <div className="flex-grow border-t border-gray-200 dark:border-gray-600"></div>
-          <h2 className="text-2xl font-bold text-center mx-4">Main Menu</h2>
+          <h2 className="text-2xl font-bold text-center mx-4">Menu</h2>
           <div className="flex-grow border-t border-gray-200 dark:border-gray-600"></div>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-2 gap-4">

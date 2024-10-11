@@ -10,7 +10,7 @@ const MainContainer = ({ children }) => {
     <main>
       {location.pathname === "/" ? null : <Navbar />}
       <div
-        className={`w-full text-black text-xs md:text-base lg:text-base dark:text-white ${
+        className={`w-full  text-black text-xs md:text-base lg:text-base dark:text-white ${
           location.pathname === "/" || location.pathname === "/company"
             ? "p-0"
             : "p-4"

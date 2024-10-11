@@ -17,14 +17,14 @@ const Search = () => {
     };
 
     return (
-        <div className="flex items-center border border-gray-300 rounded-lg p-2 dark:text-white  dark:bg-gray-800">
+        <div className="flex items-center border border-gray-300 rounded-lg px-4 py-1 dark:text-white  dark:bg-gray-800">
             <img src={icon.search} alt="Search Icon" className="mr-2 w-8" />
             <input
                 type="text"
                 placeholder={placeholderText}
                 value={searchQuery} 
                 onChange={handleInputChange}
-                className="flex-grow outline-none rounded-md pl-4 py-1 dark:bg-gray-800"
+                className="w-full outline-none dark:placeholder:text-white py-2 placeholder:text-gray-400 rounded-md pl-4  bg-white dark:bg-grays border-white border-b dark:text-white "
             />
           
             {searchQuery && (

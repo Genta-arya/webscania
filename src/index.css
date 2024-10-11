@@ -6,23 +6,29 @@
 /* Kelas kustom untuk tema */
 body {
   @apply bg-white; /* Tema terang default */
+  transition: background-color 0.5s ease-in-out; /* Transisi untuk body */
 }
 
 body.dark {
   @apply bg-gray-900; /* Tema gelap */
 }
+
+/* Transisi untuk elemen dengan background berbeda pada tema */
+.transition-element {
+  transition: background-color 0.5s ease-in-out; /* Transisi background */
+}
+
 /* Menghilangkan scrollbar untuk semua elemen */
 ::-webkit-scrollbar {
-    display: none;
-  }
+  display: none;
+}
   
-  /* Untuk Mozilla Firefox */
-  html {
-    scrollbar-width: none; /* Firefox */
-  }
+/* Untuk Mozilla Firefox */
+html {
+  scrollbar-width: none; /* Firefox */
+}
   
-  /* Untuk Internet Explorer dan Edge */
-  body {
-    -ms-overflow-style: none; /* Internet Explorer and Edge */
-  }
-  
+/* Untuk Internet Explorer dan Edge */
+body {
+  -ms-overflow-style: none; /* Internet Explorer and Edge */
+}

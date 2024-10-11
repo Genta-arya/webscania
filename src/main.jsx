@@ -1,19 +1,20 @@
-import { StrictMode } from "react";
+
 import { createRoot } from "react-dom/client";
 
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { path } from "./utils/utils.js";
-import Home from "./view/home/Home.jsx";
+
 import MainType from "./view/type/MainType.jsx";
 import MainWiring from "./view/wiring/MainWiring.jsx";
 import MainWorkshop from "./view/workshop/MainWorkshop.jsx";
 import Webview from "./components/Webview.jsx";
+import SplashScreen from "./components/SplashScreen.jsx";
 
 const router = createBrowserRouter([
   {
     path: path.home,
-    element: <Home />,
+    element: <SplashScreen />,
   },
   {
     path: path.type,

@@ -4,6 +4,7 @@ import ListItemContainer from "../../../components/ListItemContainer";
 import useSearch from "../../../libs/Zustand/useSearch";
 import Loading from "../../../components/Loading";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
+import PdfView from "../../../components/PdfView";
 
 const ListType = () => {
   const [dataTypes, setDataTypes] = useState([]);
@@ -84,7 +85,7 @@ const ListType = () => {
         <div>
           <button
             onClick={handleBack}
-            className="mb-4 p-2 bg-blue-500 text-white rounded-lg"
+            className="mt-4 p-2 w-full flex justify-center bg-grays text-white rounded-lg mb-4 hover:opacity-80"
           >
             <div className="flex items-center gap-2 px-4">
               <FaArrowLeft />
@@ -92,18 +93,7 @@ const ListType = () => {
             </div>
           </button>
 
-          <div style={{ height: "800px", overflow: "hidden" }}>
-            <iframe
-              src={pdfUrl}
-              className="rounded-lg"
-              width="100%"
-              height="100%"
-              style={{ border: "none" }}
-              title="PDF Viewer"
-              onLoad={handlePdfLoad}
-              onScroll={() => setLoadingPdf(false)}
-            />
-          </div>
+          <PdfView link={pdfUrl} />
         </div>
       ) : selectedCodes ? (
         <div>
@@ -112,7 +102,7 @@ const ListType = () => {
               filteredCodes.map((code) => (
                 <li
                   key={code.id}
-                  className="p-2 bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-600 hover:bg-gray-200 rounded shadow-md cursor-pointer"
+                  className="p-2 bg-gray-100 dark:bg-gray-600 dark:hover:bg-gray-500 hover:bg-gray-300 rounded shadow-md cursor-pointer"
                   onClick={() => handleCodeClick(code.pdfUrl)}
                 >
                   <div className="flex items-center gap-2">
@@ -127,7 +117,7 @@ const ListType = () => {
           </ul>
           <button
             onClick={handleBack}
-            className="mt-4 p-2 bg-blue-500 text-white rounded-lg"
+            className="mt-4 p-2 hover:opacity-80 w-full flex justify-center bg-grays text-white rounded-lg"
           >
             <div className="flex items-center gap-2 px-4">
               <FaArrowLeft />
