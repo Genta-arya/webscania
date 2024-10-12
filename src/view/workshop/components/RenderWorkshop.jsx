@@ -51,7 +51,7 @@ const navigate = useNavigate();
         </div>
       ) : (
         filteredData.map((item) => (
-          <div key={item.id} className="flex items-center border-b py-2 hover:bg-gray-200 dark:hover:bg-gray-700 cursor-pointer" onClick={() => handleClick(item)}>
+          <div key={item.id} className="flex items-center border-b py-2 transition-colors ease-in hover:bg-gray-300 border-black dark:border-white dark:hover:bg-gray-700 cursor-pointer" onClick={() => handleClick(item)}>
             <ImageContainer img={icon.folder} />
             <div className="ml-2">{item.name}</div>
           </div>

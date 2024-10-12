@@ -97,7 +97,7 @@ const DetailFolder = () => {
                       {filteredFiles.map((file) => (
                         <li
                           key={file.id}
-                          className="py-3 flex items-center gap-2 border-b hover:bg-gray-300 hover:cursor-pointer dark:hover:bg-gray-700"
+                          className="py-3 flex items-center gap-2 border-b border-black dark:border-white hover:bg-gray-300 hover:cursor-pointer dark:hover:bg-gray-700"
                           onClick={() => handleFileClick(file.fileUrl)} // Tambahkan handler klik
                         >
                           <ImageContainer img={icon.pdf} />

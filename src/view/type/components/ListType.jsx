@@ -86,7 +86,7 @@ const ListType = () => {
     <ListItemContainer
       text={
         pdfUrl
-          ? `Codes: ${
+          ? `#  ${
               selectedCodes.find((code) => code.pdfUrl === pdfUrl)?.code
             }`
           : selectedCodes

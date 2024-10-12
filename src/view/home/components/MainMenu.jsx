@@ -32,9 +32,9 @@ const MainMenu = () => {
         transition={{ duration: 0.5 }} // Durasi animasi
       >
         <div className="flex items-center mb-4">
-          <div className="flex-grow border-t border-gray-200 dark:border-gray-600"></div>
+          <div className="flex-grow border-t border-white "></div>
           <h2 className="text-2xl font-bold text-center mx-4">Menu</h2>
-          <div className="flex-grow border-t border-gray-200 dark:border-gray-600"></div>
+          <div className="flex-grow border-t border-white "></div>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-2 gap-4">
           {/* Link dengan motion.div untuk efek hover */}

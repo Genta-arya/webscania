@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "./Navbar";
 import { useLocation } from "react-router-dom";
-import { Toaster } from "sonner";
+import { Toaster, toast } from "sonner";
 
 const MainContainer = ({ children }) => {
   const location = useLocation();
@@ -10,7 +10,7 @@ const MainContainer = ({ children }) => {
     <main>
       {location.pathname === "/" ? null : <Navbar />}
       <div
-        className={`w-full  text-black text-xs md:text-base lg:text-base dark:text-white ${
+        className={`w-full text-black text-xs md:text-base lg:text-base dark:text-white ${
           location.pathname === "/" || location.pathname === "/company"
             ? "p-0"
             : "p-4"
@@ -18,7 +18,18 @@ const MainContainer = ({ children }) => {
       >
         {children}
       </div>
-      <Toaster richColors position="bottom-center" closeButton />
+      <Toaster
+        richColors
+        position="bottom-center"
+        closeButton
+        toastOptions={{
+          style: {
+            backgroundColor: "Scrollbar", 
+            color: "coral",
+            
+          },
+        }}
+      />
     </main>
   );
 };

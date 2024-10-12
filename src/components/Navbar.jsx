@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { FaChevronLeft } from "react-icons/fa6";
+import { FaChevronLeft, FaMoon, FaSun } from "react-icons/fa6";
 import { useLocation, useNavigate } from "react-router-dom";
 import { path } from "../utils/utils";
 import useSearch from "../libs/Zustand/useSearch";
@@ -27,10 +27,14 @@ const Navbar = () => {
 
     if (newMode) {
       document.body.classList.add("dark");
-      toast.info("Dark mode on");
+      toast.info("Dark mode on", {
+        icon: <FaMoon />,
+      });
     } else {
       document.body.classList.remove("dark");
-      toast.info("Light mode on", {});
+      toast.info("Light mode on", {
+        icon: <FaSun />,
+      });
     }
 
     localStorage.setItem("darkMode", newMode);
